@@ -5,13 +5,16 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('Country', {
     id: {
-      type: DataTypes.STRING(3),
+      type: DataTypes.STRING,
       allowNull: false,
       primaryKey: true,
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      set (value){
+        this.setDataValue('name', value.toLowerCase());
+      },
     },
     flag: {
       type: DataTypes.STRING,
@@ -23,6 +26,7 @@ module.exports = (sequelize) => {
     },
     capital: {
       type: DataTypes.STRING,
+      defaultValue: 'No posee capital',
       allowNull: false,
     }, 
     subregion: {

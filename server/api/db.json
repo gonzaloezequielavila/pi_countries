@@ -206,6 +206,7 @@
                 "regex": "^(\\d{5})$"
             }
         },
+        
         {
             "name": {
                 "common": "San Marino",
