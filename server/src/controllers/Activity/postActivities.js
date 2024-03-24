@@ -1,4 +1,4 @@
-const {Activity} = require('../db');
+const {Activity} = require('../../db');
 
 const postActivities = async (req, res) => {
   try{

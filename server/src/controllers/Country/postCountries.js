@@ -1,5 +1,5 @@
-const { Country } = require('../db');
-const { countries } = require('../../api/db.json');
+const { Country } = require('../../db');
+const { countries } = require('../../../api/db.json');
 
 const URL = "https://restcountries.com/v3/all"
 

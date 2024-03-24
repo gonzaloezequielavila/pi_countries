@@ -1,15 +1,20 @@
 const { Router } = require("express");
-const getCountries = require('../controllers/getCountries.js');
-const getCountriesById = require('../controllers/getCountriesById.js');
-const postCountries = require("../controllers/postCountries.js");
-const getCountriesByName = require("../controllers/getCountriesByName.js");
-const postActivities = require("../controllers/postActivities.js");
-const getActivities = require("../controllers/getActivities.js");
-
-const router = Router();
-router.post('/countries', postCountries);
 
 //!Countries
+const getCountries = require('../controllers/Country/getCountries.js');
+const getCountriesById = require('../controllers/Country/getCountriesById.js');
+const postCountries = require("../controllers/Country/postCountries.js");
+const getCountriesByName = require("../controllers/Country/getCountriesByName.js");
+
+//!Activities
+const postActivities = require("../controllers/Activity/postActivities.js");
+const getActivities = require("../controllers/Activity/getActivities.js");
+const deleteActivity = require("../controllers/Activity/deleteActivity.js");
+
+const router = Router();
+
+//!Countries
+router.post('/countries', postCountries);
 router.get('/countries', getCountries);
 router.get('/countries/:id', getCountriesById);
 router.get('/country/name', getCountriesByName);
@@ -18,6 +23,7 @@ router.get('/country/name', getCountriesByName);
 //!Activities
 router.post('/activities', postActivities);
 router.get('/activities', getActivities);
+router.delete('/activities/:id', deleteActivity);
 
 
 module.exports = router;

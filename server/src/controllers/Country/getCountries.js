@@ -1,5 +1,5 @@
 const axios = require('axios');
-const {Country, Activity} = require('../db');
+const {Country, Activity} = require('../../db');
 
 const URL = 'http://localhost:3001/countries';
 
