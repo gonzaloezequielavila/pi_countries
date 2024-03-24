@@ -4,6 +4,7 @@ const getCountriesById = require('../controllers/getCountriesById.js');
 const postCountries = require("../controllers/postCountries.js");
 const getCountriesByName = require("../controllers/getCountriesByName.js");
 const postActivities = require("../controllers/postActivities.js");
+const getActivities = require("../controllers/getActivities.js");
 
 const router = Router();
 router.post('/countries', postCountries);
@@ -15,7 +16,8 @@ router.get('/country/name', getCountriesByName);
 // If I use /countries/name it doesn't work, I wrote it in singular and for some reason it works now
 
 //!Activities
-router.post('/countries/activities', postActivities);
+router.post('/activities', postActivities);
+router.get('/activities', getActivities);
 
 
 module.exports = router;
