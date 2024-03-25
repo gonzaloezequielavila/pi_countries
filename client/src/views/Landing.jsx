@@ -6,7 +6,7 @@ const Landing = ()=> {
   return(
     <div className={styles.container}>
       <div>
-        <LoginText/>
+        <h1>This is the Landing Page</h1>
       </div>
     </div>
   )
