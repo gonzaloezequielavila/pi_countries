@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './HomePage.module.css'
+import Card from '../components/Card';
 
 const HomePage = () => {
 
@@ -12,6 +13,7 @@ const HomePage = () => {
       <h1>This is the home page</h1>
       <div className={styles.searchBar}>
         <input className={styles.input} placeholder='Search a Game'></input>
+        <Card/>
         <button onClick={message}>Search</button>
       </div>
     </div>

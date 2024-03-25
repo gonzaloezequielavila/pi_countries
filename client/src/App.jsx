@@ -4,6 +4,7 @@ import './App.css'
 //!Views
 import HomePage from './views/HomePage'
 import Landing from './views/Landing'
+import Detail from './views/Detail'
 
 //!Components
 
@@ -22,6 +23,11 @@ function App() {
         <Route
         path='/home'
         element={<HomePage/>}/>
+
+        <Route
+        path='/detail/:id'
+        element={<Detail/>}/>
+
       </Routes>
 
     </div>
