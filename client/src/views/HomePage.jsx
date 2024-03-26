@@ -12,8 +12,7 @@ const HomePage = () => {
     <div className={styles.container}>
       <h1>This is the home page</h1>
       <div className={styles.searchBar}>
-        <input className={styles.input} placeholder='Search a Game'></input>
-        <Card/>
+        <input className={styles.input} placeholder='Search for a Country'></input>
         <button onClick={message}>Search</button>
       </div>
     </div>
