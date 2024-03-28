@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
 
+import styles from './Card.module.css';
+
 
 
 
@@ -25,7 +27,7 @@ const Card = () => {
   }, [id])
 
 return (
-  <div>
+  <div className={styles.cardContainer}>
     <h1>{countryDetail.name}</h1>
     <div>
       <img src={countryDetail.flag} alt={`${countryDetail.name}'s flag`}/>
